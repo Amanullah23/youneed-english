@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f8fa;
+  --foreground: #101828;
+
+  /* Brand palette */
+  --brand-navy: #1b3a6b;
+  --brand-navy-light: #2f5c99;
+  --brand-gold: #f2a83b;
+  --brand-gold-dark: #d4880f;
+  --brand-green: #2fa36b;
+  --brand-slate: #5b6b82;
+  --brand-border: #dde3ec;
+  --brand-surface: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-navy-light: var(--brand-navy-light);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-gold-dark: var(--brand-gold-dark);
+  --color-brand-green: var(--brand-green);
+  --color-brand-slate: var(--brand-slate);
+  --color-brand-border: var(--brand-border);
+  --color-brand-surface: var(--brand-surface);
+
+  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f1b2d;
+    --foreground: #e7ecf3;
+
+    --brand-navy: #4f7cc2;
+    --brand-navy-light: #6d97d6;
+    --brand-gold: #f2b559;
+    --brand-gold-dark: #e0982f;
+    --brand-green: #45c489;
+    --brand-slate: #96a5ba;
+    --brand-border: #24344a;
+    --brand-surface: #16243a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+}
+@keyframes gentle-float {
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -8px;
+  }
+}
